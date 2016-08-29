@@ -24,9 +24,13 @@ Development Environment Setup:
 5) Run the server by command "npm start"
 
 Script created in Package.JSON
+
 	clean - removes build directory
+
 	compile - TypeScript compilation (with sourcemaps)
+
 	build - build the project
+	
 	start - runs lite server which uses configuration from bs-config.json
 
 
