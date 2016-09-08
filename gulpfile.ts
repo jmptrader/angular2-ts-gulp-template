@@ -31,7 +31,7 @@ gulp.task("compile", ["tslint"], () => {
         .pipe(sourcemaps.init())
         .pipe(tsc(tsProject));
     return tsResult.js
-        .pipe(sourcemaps.write("."))
+        .pipe(sourcemaps.write(".", {sourceRoot: '/src'}))
         .pipe(gulp.dest("build"));
 });
 
@@ -48,7 +48,7 @@ gulp.task("resources", () => {
  */
 gulp.task("libs", () => {
     return gulp.src([
-            'es6-shim/es6-shim.min.js',
+            'core-js/client/shim.min.js',
             'systemjs/dist/system-polyfills.js',
             'systemjs/dist/system.src.js',
             'reflect-metadata/Reflect.js',

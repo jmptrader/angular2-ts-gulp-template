@@ -1,7 +1,8 @@
-/* Avoid: 'error TS2304: Cannot find name <type>' during compilation */
 ///<reference path="../../typings/index.d.ts"/>
 
-import {bootstrap} from "@angular/platform-browser-dynamic";
-import {AppComponent} from "./app.component";
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {AppModule} from './app.module';
 
-bootstrap(AppComponent);
+const platform = platformBrowserDynamic();
+
+platform.bootstrapModule(AppModule);
