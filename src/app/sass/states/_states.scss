@@ -1,0 +1,21 @@
+/*
+* General Guideline:
+* A state is something that augments and overrides all other styles. 
+* For example, an accordion section may be in a collapsed or expanded state. 
+* A message may be in a success or error state.
+* States are generally applied to the same element as a layout rule or applied to the same element as a base module class.
+* States should be made to stand alone and are usually built of a single class selector.
+* Since the state will likely need to override the style of a more complex rule set, the use of !important is allowed
+*/
+
+.is-collapsed {
+
+}
+
+.is-hidden {
+
+}
+
+.is-tab-active {
+	
+}

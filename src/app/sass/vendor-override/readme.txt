@@ -1,0 +1,1 @@
+Define rule for vendor specific overrides.

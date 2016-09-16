@@ -39,6 +39,8 @@ gulp.task("compile", ["tslint"], () => {
 /**
  * Compile your Sass files
  * sass({outputStyle: 'compressed'}) to compress the css
+ * outputStyle
+ * Type: String Default: nested Values: nested, expanded, compact, compressed
  */
 gulp.task('sass', function () {
     return gulp.src('src/**/*.scss')
@@ -52,7 +54,7 @@ gulp.task('sass', function () {
  * Copy all resources that are not TypeScript files into build directory.
  */
 gulp.task("resources", () => {
-    return gulp.src(["src/**/*", "!**/*.ts"])
+    return gulp.src(["src/**/*", "!**/*.ts", "!**/*.scss","!src/app/sass","!src/app/sass/**"])
         .pipe(gulp.dest("build"));
 });
 
